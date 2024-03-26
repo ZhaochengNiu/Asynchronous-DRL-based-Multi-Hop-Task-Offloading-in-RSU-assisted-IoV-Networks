@@ -150,8 +150,6 @@ class Vehicle(object):
         self._vehicle_task_list = TaskList(self._task_number, self._min_datasize, self._max_datasize)
         # self._vehicle_task_list = TaskList(self._task_number, self._min_datasize, self._max_datasize, self._seed)
 
-
-
     #获取原始信息
     def get_initial_data(self) -> list:
 
@@ -167,7 +165,6 @@ class Vehicle(object):
     def get_location(self) -> list:
         location = [self._vehicle_x_location, self._vehicle_y_location]
         return location
-
 
     #每秒坐标变化
     def change_location(self) -> list:
@@ -208,8 +205,6 @@ class Vehicle(object):
         else:
             return self._vehicle_task_list.sum_datasize()  # 车辆上有任务
 
-
-
 ########################################################################
 #对所有车辆进行操作的类
 # 功能有：获取车辆数量，获取车辆基础信息列表，增加车辆数量，从车辆队列中删除不在范围内的车辆
@@ -249,7 +244,6 @@ class VehicleList(object):
         self._vehicle_x_initial_location=vehicle_x_initial_location
         self._min_vehicle_y_initial_location= min_vehicle_y_initial_location
         self._max_vehicle_y_initial_location= max_vehicle_y_initial_location
-
 
         #车辆基础信息列表，n辆车就有n个信息组
         self.vehicle_list = [

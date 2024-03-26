@@ -54,6 +54,7 @@ def get_args():
             "cuda" if torch.cuda.is_available() else "cpu")  # check GPU                        
     return args
 
+
 def env_agent_config(cfg,seed=1):
     ''' 创建环境和智能体
     '''
@@ -141,7 +142,6 @@ def train(cfg, env, agent):
     plot_completion_rate(res_dic_completion_rate['completion_rate'], res_dic_completion_rate['ma_completion_rate'],
                          cfg, tag="train")
     env.close()
-
 
 
 if __name__ == "__main__":
